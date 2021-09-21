@@ -4,6 +4,7 @@
 (global-set-key         "\M-r"         'recompile)
 (global-set-key         (kbd "C-1")         (lambda () (interactive) (insert "\t")))
 
+
 ; Just don't, eh?
 (setq vc-handled-backends nil)
 
@@ -137,6 +138,12 @@
 
 ; Start neotree
 (neotree)
+
+; Selectrum's file completion is rather rubbish and slows me down :-(
+; (now disabled - it's just not very useful)
+                                        ;(defun my-find-file()   (interactive)   (progn (selectrum-mode -1) (unwind-protect ( progn (call-interactively 'find-file) (selectrum-mode 1)) (selectrum-mode 1))))
+;(global-set-key (kbd "C-x C-f") 'my-find-file)
+
 
 ; Set the default window size
 (if (display-graphic-p)

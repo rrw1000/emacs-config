@@ -31,18 +31,23 @@
   :init
   (which-key-mode))
 
-(use-package selectrum
-  :ensure
-  :init
-  (selectrum-mode)
-  :bind(:map selectrum-minibuffer-map
-             ("C-m" . selectrum-submit-exact-input) )
-  :custom
-  (completion-styles '(flex substring partial-completion)))
+; selectrum causes more trouble than it's worth
+;(use-package selectrum
+;  :ensure
+;  :init
+;  (selectrum-mode)
+;  :bind(:map selectrum-minibuffer-map
+;             ("C-m" . selectrum-submit-exact-input) )
+;  :custom
+;  (completion-styles '(flex substring partial-completion)))
+
+(use-package lsp-mode :ensure)
+(use-package flycheck :ensure)
+
 
 ;; Some common sense settings
 
-(load-theme 'leuven t)
+;(load-theme 'leuven t)
 (fset 'yes-or-no-p 'y-or-n-p)
 (recentf-mode 1)
 (setq recentf-max-saved-items 100
