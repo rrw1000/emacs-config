@@ -45,13 +45,14 @@
   :ensure
   :commands lsp
   :hook
-  ((pythom-mode . lsp))
+  ((python-mode . lsp))
   :custom
   ;; what to use when checking on-save. "check" is default, I prefer clippy
   (lsp-rust-analyzer-cargo-watch-command "clippy")
   ;(lsp-eldoc-render-all t)
   ;(lsp-idle-delay 0.6)
-  (lsp-rust-analyzer-server-display-inlay-hints t)
+  (lsp-rust-analyzer-server-display-inlay-hints t) 
+  (lsp-workspace-folders-add default-directory)
   :config
   (add-hook 'lsp-mode-hook 'lsp-ui-mode))
 

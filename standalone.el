@@ -5,6 +5,8 @@
 (setq user-init-file (or load-file-name (buffer-file-name)))
 (setq user-emacs-directory (file-name-directory user-init-file))
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+; Ensure that the custom file exists.
+(write-region nil nil custom-file)
 
 (load custom-file)
 (require 'package)
@@ -41,7 +43,6 @@
 ;  :custom
 ;  (completion-styles '(flex substring partial-completion)))
 
-(use-package lsp-mode :ensure)
 (use-package flycheck :ensure)
 
 
