@@ -18,6 +18,12 @@ from the root of your project. I have an alias:
 alias emacsme="emacs -q --load ~/work/emacs/emacs-config/standalone.el"
 ```
 
+## Install stuff
+
+```
+pip3 install python-lsp-server
+```
+
 
 ## Notes
 

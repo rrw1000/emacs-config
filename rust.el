@@ -44,6 +44,8 @@
 (use-package lsp-mode
   :ensure
   :commands lsp
+  :hook
+  ((pythom-mode . lsp))
   :custom
   ;; what to use when checking on-save. "check" is default, I prefer clippy
   (lsp-rust-analyzer-cargo-watch-command "clippy")
