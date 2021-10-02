@@ -11,6 +11,10 @@
 ; Show trailing whitespace
 (setq-default show-trailing-whitespace 't)
 
+; No more eldoc!
+(setq global-eldoc-node nil)
+
+
 ; Confirm killing emacs, in case of quirkafleegs.
 (setq confirm-kill-emacs 'y-or-n-p)
 
@@ -47,6 +51,8 @@
 (use-package java-imports :ensure)
 (use-package neotree :ensure)
 (use-package terraform-mode :ensure)
+(use-package solidity-mode :ensure)
+
 
 
 ;; Make ivy use a fixed height mb

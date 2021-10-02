@@ -49,6 +49,7 @@
   :custom
   ;; what to use when checking on-save. "check" is default, I prefer clippy
   (lsp-rust-analyzer-cargo-watch-command "clippy")
+  (lsp-signature-auto-activate 'nil)
   ;(lsp-eldoc-render-all t)
   ;(lsp-idle-delay 0.6)
   (lsp-rust-analyzer-server-display-inlay-hints t)
