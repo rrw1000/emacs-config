@@ -48,8 +48,9 @@
 
 ;; Some common sense settings
 
-;(load-theme 'leuven t)
-(fset 'yes-or-no-p 'y-or-n-p)
+					;(load-theme 'leuven t)
+;; I don't like this - rrw
+;; (fset 'yes-or-no-p 'y-or-n-p)
 (recentf-mode 1)
 (setq recentf-max-saved-items 100
       inhibit-startup-message t

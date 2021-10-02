@@ -35,6 +35,7 @@ pip3 install python-lsp-server
 
 `C-1` inserts a literal tab
 
+`F8` toggles neotree.
 
 
  

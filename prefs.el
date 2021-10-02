@@ -8,6 +8,9 @@
 ; Just don't, eh?
 (setq vc-handled-backends nil)
 
+; Show trailing whitespace
+(setq-default show-trailing-whitespace 't)
+
 ; Confirm killing emacs, in case of quirkafleegs.
 (setq confirm-kill-emacs 'y-or-n-p)
 
@@ -43,6 +46,7 @@
 (use-package rjsx-mode :ensure)
 (use-package java-imports :ensure)
 (use-package neotree :ensure)
+(use-package terraform-mode :ensure)
 
 
 ;; Make ivy use a fixed height mb
@@ -138,6 +142,7 @@
 
 ; Start neotree
 (neotree)
+(global-set-key [f8] 'neotree-toggle)
 
 ; Selectrum's file completion is rather rubbish and slows me down :-(
 ; (now disabled - it's just not very useful)

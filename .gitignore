@@ -8,3 +8,4 @@ custom.el
 .cache
 var/
 eclipse.jdt.ls/
+semanticdb/

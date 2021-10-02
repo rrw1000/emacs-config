@@ -51,10 +51,13 @@
   (lsp-rust-analyzer-cargo-watch-command "clippy")
   ;(lsp-eldoc-render-all t)
   ;(lsp-idle-delay 0.6)
-  (lsp-rust-analyzer-server-display-inlay-hints t) 
+  (lsp-rust-analyzer-server-display-inlay-hints t)
+  :commands
   (lsp-workspace-folders-add default-directory)
   :config
-  (add-hook 'lsp-mode-hook 'lsp-ui-mode))
+  (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+ )
+
 
 (use-package lsp-ui
   :ensure
