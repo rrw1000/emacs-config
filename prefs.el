@@ -3,7 +3,8 @@
 (global-set-key         "\M-d"         'neotree-find)
 (global-set-key         "\M-r"         'recompile)
 (global-set-key         (kbd "C-1")         (lambda () (interactive) (insert "\t")))
-
+;; Allow us to insert a hash on Macs.
+(global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
 
 ; Just don't, eh?
 (setq vc-handled-backends nil)

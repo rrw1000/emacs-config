@@ -37,6 +37,9 @@ pip3 install python-lsp-server
 
 `F8` toggles neotree.
 
+`M-3` inserts a hash (so you can use a UK mac)
+
+
 
  
  
