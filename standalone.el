@@ -43,6 +43,7 @@
 ;  :custom
 ;  (completion-styles '(flex substring partial-completion)))
 
+(load-file (expand-file-name "scilla-mode/scilla-mode.el" user-emacs-directory))
 (use-package flycheck :ensure)
 
 
