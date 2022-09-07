@@ -53,7 +53,7 @@
 (use-package neotree :ensure)
 (use-package terraform-mode :ensure)
 (use-package solidity-mode :ensure)
-
+(use-package tuareg :ensure)
 
 
 ;; Make ivy use a fixed height mb
@@ -147,8 +147,9 @@
 ; Always split windows horizontally
 (setq split-width-threshold nil)
 
-; Start neotree
-(neotree)
+                                        ; Start neotree
+; I kept turning this off, so that's the default now - rrw 2022-08-17
+; (neotree)
 (global-set-key [f8] 'neotree-toggle)
 
 ; Selectrum's file completion is rather rubbish and slows me down :-(

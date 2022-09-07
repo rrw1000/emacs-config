@@ -79,6 +79,11 @@ Also affects 'linum-mode' background."
   :type 'number
   :group 'monokai)
 
+(defcustom monokai-height-minus-2 0.6
+  "Font size -2."
+  :type 'number
+  :group 'monokai)
+
 (defcustom monokai-height-plus-1 1.1
   "Font size +1."
   :type 'number
@@ -122,6 +127,16 @@ Also affects 'linum-mode' background."
 
 (defcustom monokai-blue "#66D9EF"
   "Primary colors - blue"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-dark-blue "#270BDE"
+  "Primary colors - dark blue"
+  :type 'string
+  :group 'monokai)
+
+(defcustom monokai-pink "#F5B3B0"
+  "Primary colors - pink"
   :type 'string
   :group 'monokai)
 
@@ -3334,6 +3349,10 @@ Also affects 'linum-mode' background."
      ((,monokai-class (:background ,monokai-highlight-line))
       (,monokai-256-class (:background ,monokai-highlight-line))))
 
+   `(lsp-rust-analyzer-inlay-face
+     ((,monokai-class (:foreground ,monokai-pink
+                                   :height ,monokai-height-minus-1,
+                                   :italic t))))
    ;; lusty-explorer
    `(lusty-directory-face
      ((,monokai-class (:inherit dimonokai-red-directory))
