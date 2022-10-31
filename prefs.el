@@ -54,7 +54,8 @@
 (use-package terraform-mode :ensure)
 (use-package solidity-mode :ensure)
 (use-package tuareg :ensure)
-
+(use-package graphql-mode :ensure)
+(use-package svelte-mode :ensure)
 
 ;; Make ivy use a fixed height mb
 (setq selectrum-fix-vertical-window-height t)
