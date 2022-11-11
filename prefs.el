@@ -56,6 +56,11 @@
 (use-package tuareg :ensure)
 (use-package graphql-mode :ensure)
 (use-package svelte-mode :ensure)
+(if (version< emacs-version "27.1")
+    ()
+    (use-package bazel :ensure))
+
+
 
 ;; Make ivy use a fixed height mb
 (setq selectrum-fix-vertical-window-height t)
