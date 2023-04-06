@@ -55,6 +55,7 @@
 (use-package solidity-mode :ensure)
 (use-package tuareg :ensure)
 (use-package graphql-mode :ensure)
+(use-package groovy-mode :ensure)
 (use-package svelte-mode :ensure)
 (if (version< emacs-version "27.1")
     ()
@@ -95,7 +96,11 @@
   "jsx/tsx indentation"
   (interactive)
   (setq typescript-indent-level 2)
+  (setq javascript-indent-level 2)
   )
+
+(add-hook 'typescript-mode-hook 'js-indent)
+(add-hook 'javascript-mode-hook 'js-indent)
 
 (defun old-indentation ()
   "Old indentation"
