@@ -60,7 +60,8 @@
 (if (version< emacs-version "27.1")
     ()
     (use-package bazel :ensure))
-
+(use-package jinja2-mode :ensure)
+(use-package json-mode :ensure)
 
 
 ;; Make ivy use a fixed height mb
@@ -82,14 +83,29 @@
 (setq-default indent-tabs-mode nil)
 (autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
 (setq csharp-want-flymake-fixup 'nil)
-(setq auto-mode-alist 
+(setq auto-mode-alist
       (append '(("\\.cs$" . csharp-mode)) auto-mode-alist))
-(setq auto-mode-alist 
+(setq auto-mode-alist
       (append '(("\\.jsx$" .
                  rjsx-mode)) auto-mode-alist))
-(setq auto-mode-alist 
+(setq auto-mode-alist
       (append '(("\\.tsx$" .
                  typescript-mode)) auto-mode-alist))
+
+(setq auto-mode-alist
+      (append '(("\\.tf$" .
+                 terraform-mode)) auto-mode-alist))
+
+(setq auto-mode-alist
+      (append '(("\\.tf$" .
+                 terraform-mode)) auto-mode-alist))
+(setq auto-mode-alist
+      (append '(("\\.j2$" .
+                 jinja2-mode)) auto-mode-alist))
+
+(setq auto-mode-alist
+      (append '(("\\.json$" .
+                 json-mode)) auto-mode-alist))
 
 ;; repo indent styles
 (defun js-indent ()
