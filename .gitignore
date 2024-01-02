@@ -9,3 +9,5 @@ custom.el
 var/
 eclipse.jdt.ls/
 semanticdb/
+session.*
+url/

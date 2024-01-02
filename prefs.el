@@ -6,6 +6,9 @@
 ;; Allow us to insert a hash on Macs.
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
 
+;; Stop the warnings buffer popping up (in emacs 29+) for package-internal warnings
+(setq warning-minimum-level :error)
+
 ; Just don't, eh?
 (setq vc-handled-backends nil)
 
@@ -25,7 +28,11 @@
 
 ;; Load some packages I like
 ;;  csharp-mode cuda-mode dart-mode flutter rust-mode gradle-mode typescript-mode ini-mode dockerfile-mode godoctor go-tag go-stacktracer go-rename go-imports go-guru go-gopath go-fill-struct swift3-mode swift-mode jinja2-mode markdown-mode+ kubernetes jdee tide google-c-style adoc-mode markdown-mode go-mode yaml-mode terraform-mode kotlin-mode js2-mode dash assess
-(use-package csharp-mode :ensure)
+
+;; csharp-mode is built-in as of version 29
+(if (version< emacs-version "29")
+    (use-package csharp-mode :ensure)
+  )
 (use-package cuda-mode :ensure)
 (use-package dart-mode :ensure)
 (use-package flutter :ensure)
@@ -38,7 +45,9 @@
 (use-package jinja2-mode :ensure)
 (use-package markdown-mode :ensure)
 (use-package kubernetes :ensure)
-(use-package jdee :ensure)
+;; Causes "symbol's value as variable is void" errors in emacs 29
+;; and I don't use Java much any more
+;; (use-package jdee :ensure)
 (use-package tide :ensure)
 (use-package google-c-style :ensure)
 (use-package adoc-mode :ensure)
@@ -81,7 +90,11 @@
 
 ;; Don't use tabs for indentation (at all)
 (setq-default indent-tabs-mode nil)
-(autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
+
+;; csharp-mode is built-in as of version 29
+(if (version< emacs-version "29")
+    (autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
+  )
 (setq csharp-want-flymake-fixup 'nil)
 (setq auto-mode-alist
       (append '(("\\.cs$" . csharp-mode)) auto-mode-alist))
