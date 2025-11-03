@@ -71,7 +71,7 @@
     (use-package bazel :ensure))
 (use-package jinja2-mode :ensure)
 (use-package json-mode :ensure)
-
+(use-package php-mode :ensure)
 
 ;; Make ivy use a fixed height mb
 (setq selectrum-fix-vertical-window-height t)
@@ -119,6 +119,10 @@
 (setq auto-mode-alist
       (append '(("\\.json$" .
                  json-mode)) auto-mode-alist))
+
+(setq auto-mode-alist
+      (append '(("\\.php$" .
+                 php-mode)) auto-mode-alist))
 
 ;; repo indent styles
 (defun js-indent ()
